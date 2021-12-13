@@ -30,3 +30,27 @@ public class Solution {
         return got.Select(x => x.Length  ).Max();
     }
 }
+
+
+Success
+Details 
+Runtime: 128 ms, faster than 94.64% of C# online submissions for Max Consecutive Ones.
+Memory Usage: 41.4 MB, less than 18.66% of C# online submissions for Max Consecutive Ones.
+
+public class Solution {
+    public int FindMaxConsecutiveOnes(int[] nums) {
+        
+        int max= 0;
+        int curr =0;
+        for(int i =0; i< nums.Length; i++){
+            if(nums[i] ==1){
+                curr +=1;
+            }else if(nums[i] !=1 && curr>0){
+                max = Math.Max(max,curr);
+                curr =0;
+            }
+        } 
+        
+        return Math.Max(max,curr);
+    }
+}
