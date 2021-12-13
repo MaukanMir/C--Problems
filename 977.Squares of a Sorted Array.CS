@@ -36,3 +36,16 @@ public class Solution {
         return nums;
     }
 }
+
+
+Success
+Details 
+Runtime: 164 ms, faster than 44.36% of C# online submissions for Squares of a Sorted Array.
+Memory Usage: 48.7 MB, less than 26.06% of C# online submissions for Squares of a Sorted Array.
+
+public class Solution {
+    public int[] SortedSquares(int[] nums) {
+        
+       return nums.Select(x => x*x).OrderBy(x=>x).ToArray();
+}
+}
