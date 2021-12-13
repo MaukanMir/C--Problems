@@ -46,3 +46,18 @@ public class Solution {
         return count;
     }
 }
+
+
+
+Success
+Details 
+Runtime: 72 ms, faster than 99.70% of C# online submissions for Find Numbers with Even Number of Digits.
+Memory Usage: 39.3 MB, less than 9.21% of C# online submissions for Find Numbers with Even Number of Digits.
+
+
+public class Solution {
+    public int FindNumbers(int[] nums) {
+        
+       return nums.Where(x => x.ToString().Length%2 ==0).ToArray().Length;
+    }
+}
